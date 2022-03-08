@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <%= render 'partials/header'%>
+    <div class="alersts-container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
     <%= yield %>
+    <%= render 'partials/footer' %>
   </body>
 </html>
