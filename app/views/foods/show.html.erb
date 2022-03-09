@@ -1,17 +1,26 @@
 <div class="food-details-cont">
   <div class="food-info">
+    <h2 class="subheadings food-info-heading"><%= @food.name %></h2>
     <div class="image-container">
       <div class="image-holder">
       <%= image_tag 'food-icon.svg', class: "food-ava" %>
       </div>
     </div>
     <div class="food-content">
-      <div class="contetn-field"><h2>Name: </h2><p><%= @food.name %><p></div>
-      <div class="contetn-field"><h2>Unit Price: </h2><p>USD <%= @food.price %><p></div>
-      <div class="contetn-field"><h2>MOU: </h2><p><%= @food.measurement_unit %><p></div>
-      <div class="contetn-field"><h2>Added by: </h2><p><%= @food.user.name %><p></div>
-      <div class="contetn-field"><h2>Creation date: </h2><p><%= @food.created_at %><p></div>
-      <%= button_to "Remove this ingridient", food_path(id: @food.id), method: :delete, class: "delete-btns" %>
+      <div class="contetn-field"><h2 class="food-info-headings">Name: </h2><p><%= @food.name %><p></div>
+      <div class="contetn-field"><h2 class="food-info-headings">Unit Price: </h2><p>USD <%= @food.price %><p></div>
+      <div class="contetn-field"><h2 class="food-info-headings">MOU: </h2><p><%= @food.measurement_unit %><p></div>
+      <div class="contetn-field"><h2 class="food-info-headings">Added by: </h2><p><%= @food.user.name %><p></div>
+      <div class="contetn-field"><h2 class="food-info-headings">Creation date: </h2><p><%= @food.created_at %><p></div>
+      <%= button_to "Remove this ingridient",
+                    food_path(id: @food.id),
+                    method: :delete,
+                    style: "padding: 5px 10px;
+                            border: none;
+                            border-radius: 5px;
+                            background: linear-gradient(#f36033, #b34320);
+                            color: #ffffff;
+                            font-size: 14px;"  %>
     </div>
   </div>
 </div>
