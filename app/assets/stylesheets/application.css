@@ -136,7 +136,6 @@ tbody tr:nth-child(even) {
 td {
   border-bottom: 1px solid #cecfd5;
   border-right: 1px solid #cecfd5;
-  border-top-left-radius: 5px;
 }
 
 tr:last-child td:first-child {
@@ -149,7 +148,7 @@ tr:last-child td:last-child {
 
 .food-title {
   color: #395870;
-  display: block;
+  border-left: 1px solid #cecfd5;
 }
 
 .text-offset {
