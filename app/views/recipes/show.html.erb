@@ -9,4 +9,5 @@
   <%= button_to "Destroy this recipe", @recipe, method: :delete %>
 <% end %>
 
+  <%= link_to "Add ingridiants", new_foods_recipe_path(recipe_id: @recipe.id)%>
 </div>
