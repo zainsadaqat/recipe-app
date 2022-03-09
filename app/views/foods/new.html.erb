@@ -17,7 +17,8 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Add ingredient" %>
+      <%= f.submit "Add ingredient", class: "creatror-btns" %>
+      <%= link_to "Cancel", foods_path, class: 'cancel-btns'%>
     </div>
   <% end %>
 </div>
