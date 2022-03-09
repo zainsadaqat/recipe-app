@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<% if current_user.present? %>
+
+<h1>Recipes</h1>
+
+<div id="recipes">
+  <% @recipes.each do |recipe| %>
+    <%= render recipe %>
+    <p>
+      <%= link_to "Show this recipe", recipe %>
+    </p>
+  <% end %>
+</div>
+<%= link_to "New recipe", new_recipe_path %>
+
+<% else %>
+  <h3>We're sorry but you don't have permission to read the recipes.</h3>
+<% end %>
