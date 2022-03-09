@@ -1,1 +1,17 @@
-<h3>single food</h3>
+<div class="food-details-cont">
+  <div class="food-info">
+    <div class="image-container">
+      <div class="image-holder">
+      <%= image_tag 'food-icon.svg', class: "food-ava" %>
+      </div>
+    </div>
+    <div class="food-content">
+      <div class="contetn-field"><h2>Name: </h2><p><%= @food.name %><p></div>
+      <div class="contetn-field"><h2>Unit Price: </h2><p>USD <%= @food.price %><p></div>
+      <div class="contetn-field"><h2>MOU: </h2><p><%= @food.measurement_unit %><p></div>
+      <div class="contetn-field"><h2>Added by: </h2><p><%= @food.user.name %><p></div>
+      <div class="contetn-field"><h2>Creation date: </h2><p><%= @food.created_at %><p></div>
+      <%= button_to "Remove this ingridient", food_path(id: @food.id), method: :delete, class: "delete-btns" %>
+    </div>
+  </div>
+</div>
