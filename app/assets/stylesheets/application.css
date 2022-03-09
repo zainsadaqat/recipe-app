@@ -26,6 +26,7 @@ html {
   margin: 0;
   text-decoration: none;
   list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -52,4 +53,115 @@ footer {
   padding: 10px;
   border-top: 1px solid black;
   text-align: center;
+}
+
+.foods-main-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  padding: 20px;
+}
+
+.foods-inner-content {
+  width: 80%;
+  max-width: 800px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgb(177, 177, 177);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-details-cont {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+}
+
+.food-info {
+  width: 80%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  grid-template-rows: 1fr;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgb(177, 177, 177);
+}
+
+.food-ava {
+  width: 100%;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #4a4a4a;
+  font-size: 16px;
+  max-height: 600px;
+  overflow: scroll;
+}
+
+th,
+td {
+  padding: 10px 15px;
+  vertical-align: middle;
+}
+
+thead {
+  color: #fff;
+  background: linear-gradient(#49708f, #293f50);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+th:first-child {
+  border-top-left-radius: 5px;
+  text-align: left;
+}
+
+th:last-child {
+  border-top-right-radius: 5px;
+}
+
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+  border-top-left-radius: 5px;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
+
+.food-title {
+  color: #395870;
+  display: block;
+}
+
+.text-offset {
+  color: #7c7c80;
+  font-size: 12px;
+}
+
+.item-price,
+.actions {
+  text-align: center;
+}
+
+.item-price {
+  text-align: right;
 }

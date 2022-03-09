@@ -29,7 +29,7 @@ class FoodsController < ApplicationController
   def destroy
     Food.find_by(id: params[:id]).destroy
     respond_to do |format|
-      format.html { redirect_to root_path, notice: 'Ingridiant was successfully removed' }
+      format.html { redirect_to foods_path, notice: 'Ingridiant was successfully removed' }
     end
   end
 
