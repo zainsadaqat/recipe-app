@@ -1,19 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
-<% if current_user.present? %>
-
-<h1>Recipes</h1>
-
-<div id="recipes">
-  <% @recipes.each do |recipe| %>
-    <%= render recipe %>
-    <p>
-      <%= link_to "Show this recipe", recipe %>
-    </p>
-  <% end %>
+<div class="foods-main-container">
+  <div class="foods-inner-content recipes-container">
+    <h2 class="subheadings sub-head-recipe">Recipes's list</h2>
+      <div class="recipes-cards-container">
+        <% @recipes.includes(:user).each do |recipe| %>
+          <%= render recipe, :recipe => recipe %>
+        <% end %>
+      </div>
+      <%= link_to "New recipe", new_recipe_path, class: "sign-up-btns" %>
+  </div>
 </div>
-<%= link_to "New recipe", new_recipe_path %>
-
-<% else %>
-  <h3>We're sorry but you don't have permission to read the recipes.</h3>
-<% end %>
