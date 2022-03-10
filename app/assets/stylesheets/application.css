@@ -447,7 +447,7 @@ tr:last-child td:last-child {
 .recipe-actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .field-textarea {
@@ -469,4 +469,12 @@ tr:last-child td:last-child {
 
 .field-checkbox {
   color: var(--main-text-color);
+}
+
+.shopping-list-info {
+  grid-template-rows: auto auto 1fr;
+}
+
+.content-fd-shp {
+  justify-content: space-between;
 }

@@ -8,7 +8,8 @@
       <div class="contetn-field"><h2 class="food-info-headings">Cooking time: </h2><p><%= @recipe.cooking_time %><p></div>
       <div class="contetn-field"><h2 class="food-info-headings">Chef: </h2><p><%= @recipe.user.name %><p></div>
       <div class="recipe-actions">
-       <%= link_to "Add ingridiants", new_foods_recipe_path(recipe_id: @recipe.id), class: "sign-up-btns" %>
+       <%= link_to "Generate shopping list", recipe_shoping_list_path({recipe_id: @recipe.id }), class: "sign-up-btns" %>
+       <%= link_to "Add ingridiants", new_foods_recipe_path(recipe_id: @recipe.id), class: "creator-btns" %>
       </div>
     </div>
     <div class="recipte-ingridiants">
