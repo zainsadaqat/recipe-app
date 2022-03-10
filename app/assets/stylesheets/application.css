@@ -374,3 +374,44 @@ tr:last-child td:last-child {
 .item-price {
   text-align: right;
 }
+
+.recipes-container {
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 20px;
+}
+
+.recipes-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-card {
+  padding: 20px;
+  background: var(--cards-bg-color);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgb(180, 180, 180);
+}
+
+.recipe-card-contetn {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.recipe-card-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recipe-subheadings {
+  font-size: var(--subheading-font-size);
+  color: var(--main-text-color);
+}
+
+.recipe-content {
+  padding: 10px 0;
+}
