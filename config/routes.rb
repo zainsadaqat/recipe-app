@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :recipes
+  resources :recipes do
+    get '/shoping_list', to: "recipes#shoping_list"
+  end
   get '/public_recipes', to: "recipes#public_recipes"
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

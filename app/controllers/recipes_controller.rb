@@ -64,7 +64,6 @@ class RecipesController < ApplicationController
   end
 
   def shoping_list
-    @recipe = Recipe.find(praams[:id])
   end
 
   private
