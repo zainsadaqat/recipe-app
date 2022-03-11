@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Temp home page
-  root to: "users#index"
+  root to: "recipes#index"
   resources :users, only: %i[index show]
   resources :foods, only: %i[index show new create destroy]
   resources :foods_recipes, only: %i[new create destroy]
