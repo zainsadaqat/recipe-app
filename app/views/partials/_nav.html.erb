@@ -1,0 +1,12 @@
+<nav>
+  <%= link_to "Edit", edit_user_registration_path, class: "nav-btn edit-btn"%>
+  <%= button_to "Sign Out",
+      destroy_user_session_path,
+      method: :delete,
+      style: 'border: none;
+              border-radius: 5px;
+              font-size: 16px;
+              background: transparent;
+              color: #ffffff;' 
+              %>
+</nav>

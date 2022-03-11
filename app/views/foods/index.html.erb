@@ -1,0 +1,21 @@
+<div class="foods-main-container">
+  <div class="foods-inner-content">
+    <h2 class="subheadings">Ingridiant's list</h2>
+    <table>
+      <thead>
+      <tr>
+        <th scope="col">Ingredient</th>
+        <th scope="col">Measurement unit</th>
+        <th scope="col">Unit price</th>
+        <th scope="col" colspan="2">Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @foods.each do |food| %>
+          <%= render food, :food => food %>
+      <% end %>
+      </tbody>
+    </table>
+    <%= link_to "Add ingredient", new_food_path, class: "creator-btns index-food-add-btn"%>
+  </div>
+</div>

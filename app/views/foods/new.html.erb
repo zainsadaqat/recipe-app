@@ -1,0 +1,28 @@
+<div class="food-details-cont">
+  <div class="food-info fomrs-contaier">
+    <div class="creation-forms">
+      <h2 class="subheadings">Add ingredient</h2>
+      <%= form_with(model: @food, url: foods_path, method: :post, local: true) do |f| %>
+        <div class="field">
+          <%= f.label(:name, "Name") %>
+          <%= f.text_field :name %>
+        </div>
+
+        <div class="field">
+          <%= f.label(:price, "Price") %>
+          <%= f.number_field :price %>
+        </div>
+        
+        <div class="field">
+          <%= f.label(:measurement_unit, "Measurement unit") %>
+          <%= f.text_field :measurement_unit %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.submit "Add ingredient", class: "creator-btns" %>
+          <%= link_to "Cancel", foods_path, class: 'delete-btns'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

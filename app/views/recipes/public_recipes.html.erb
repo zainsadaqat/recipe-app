@@ -1,0 +1,10 @@
+<div class="foods-main-container">
+  <div class="foods-inner-content recipes-container">
+    <h2 class="subheadings sub-head-recipe"> Public Recipes's list</h2>
+      <div class="recipes-cards-container">
+        <% @public_recipess.includes([:foods, :user]).each do |recipe| %>
+            <%= render recipe, :recipe => recipe %>
+            <% end %>
+      </div>
+  </div>
+</div>
