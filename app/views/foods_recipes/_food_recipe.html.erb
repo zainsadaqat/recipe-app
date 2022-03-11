@@ -5,15 +5,18 @@
       </td>
       <td class="measurements"><%= food_recipe.quantity %></td>
       <td class="item-price">USD <%=  @recipe.target_food(food_recipe.food_id).price * food_recipe.quantity %></td>
-      <td class="actions"><%= button_to "Remove",
-                              foods_recipe_path(id: food_recipe.id, recipe_id: @recipe.id),
-                              method: :delete,
-                              style: "padding: 5px 10px;
-                                      border: none;
-                                      border-radius: 5px;
-                                      background: linear-gradient(#f36033, #b34320);
-                                      color: #ffffff;
-                                      font-size: 14px;" %></td>
+      <% if can? :update, @recipe %>  
+        <td class="actions"><%= button_to "Remove", 
+                                foods_recipe_path(id: food_recipe.id, recipe_id: @recipe.id),
+                                method: :delete,
+                                style: "padding: 5px 10px;
+                                        border: none;
+                                        border-radius: 5px;
+                                        
+                                        background: linear-gradient(#f36033, #b34320);
+                                        color: #ffffff;
+                                        font-size: 14px;" %></td>
+      <% end %>
   </tr>
 <% end %>
 

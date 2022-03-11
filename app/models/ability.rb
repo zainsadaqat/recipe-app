@@ -7,6 +7,7 @@ class Ability
 
     can :read, Recipe
     can :destroy, Recipe, user_id: user.id # if user_id matches with current user
+    can :update, Recipe, user_id: user.id # if user_id matches with current user
 
     # Define abilities for the passed in user here. For example:
     #
