@@ -21,7 +21,7 @@
         </tr>
         </thead>
         <tbody>
-        <% @recipe.foods_recipes.each do |food_recipe| %>
+        <% @recipe.foods_recipes.includes([:food]).each do |food_recipe| %>
             <%= render 'ingridient', :food_recipe => food_recipe %>
         <% end %>
         </tbody>
