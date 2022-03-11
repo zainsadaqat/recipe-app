@@ -11,6 +11,7 @@ Rails.application.configure do
     Bullet.rails_logger  = true
     Bullet.add_footer    = true
     Bullet.unused_eager_loading_enable = false
+    Bullet.n_plus_one_query_enable     = false
   end
   # Settings specified here will take precedence over those in config/application.rb.
 
