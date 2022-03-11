@@ -13,13 +13,13 @@
  *= require_tree .
  *= require_self
  */
- @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --mian-bg-color: #293f50;
   --first-bg-color: #49708f;
-  --cards-bg-color: #ffffff;
-  --headings-color: #ffffff;
+  --cards-bg-color: #fff;
+  --headings-color: #fff;
   --main-text-color: #4a4a4a;
   --font-logo: 'Lobster Two', cursive;
   --heading-font-size: 22px;
@@ -32,7 +32,6 @@
   --btn-removers: #f36033;
   --box-shadow: 0 0 5px 0 rgb(177, 177, 177);
 }
-
 
 html {
   -webkit-box-sizing: border-box;
@@ -56,11 +55,11 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
   background-image: linear-gradient(to right, var(--mian-bg-color), var(--first-bg-color), var(--mian-bg-color));
-  grid-template-areas: 
-  "header"
-  "notice"
-  "main"
-  "footer";
+  grid-template-areas:
+    "header"
+    "notice"
+    "main"
+    "footer";
 }
 
 header {
@@ -101,7 +100,6 @@ nav {
   border: none;
   border-radius: 5px;
   background: transparent;
-  font-size: var(--subheading-font-size);
   font-size: var(--subheading-font-size);
   color: var(--headings-color);
 }
@@ -149,9 +147,8 @@ footer {
   background: linear-gradient(#49708f, #293f50);
   color: var(--headings-color);
   font-size: var(--subheading-font-size);
-  font-weight: 600px;
+  font-weight: 600;
 }
-
 
 .index-food-add-btn {
   justify-self: center;
@@ -182,9 +179,9 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
-  grid-template-areas: 
-  "heading heading"
-  "image card";
+  grid-template-areas:
+    "heading heading"
+    "image card";
   grid-gap: 20px;
   padding: 20px;
   border-radius: 5px;
@@ -208,7 +205,6 @@ footer {
   align-items: center;
   gap: 10px;
   border-bottom: 2px dotted rgb(180, 180, 180);
-
 }
 
 .food-info-headings {
@@ -273,7 +269,6 @@ footer {
 .field > label {
   flex: 1;
   padding: 10px;
-  color: var(--main-text-color);
   display: flex;
   align-items: center;
   background: #cecfd5;
@@ -304,7 +299,7 @@ footer {
   border: none;
   border-radius: 5px;
   background: linear-gradient(#f36033, #b34320);
-  color: #ffffff;
+  color: #fff;
   font-size: 14px;
 }
 
@@ -320,7 +315,7 @@ footer {
   border: none;
   border-radius: 5px;
   background: linear-gradient(#59be6f, #387946);
-  color: #ffffff;
+  color: #fff;
   font-size: 14px;
   text-align: center;
   font-weight: 500;
@@ -465,7 +460,7 @@ tr:last-child td:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 }
 
 .recipe-actions {
@@ -521,7 +516,6 @@ tr:last-child td:last-child {
   color: #c2932ffd;
 }
 
-
 .alert {
   background: #f7a0a0fd;
   color: #c2392ffd;
@@ -529,7 +523,7 @@ tr:last-child td:last-child {
 
 .main-hero {
   font-size: var(--main-logo-font-size);
-  text-shadow: 6px 6px 10px #000000;
+  text-shadow: 6px 6px 10px #000;
 }
 
 .user-card {
