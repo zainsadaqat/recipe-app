@@ -1,15 +1,16 @@
 <div class="food-details-cont">
   <div class="food-info">
     <h2 class="subheadings food-info-heading"><%= @user.name %></h2>
-    <div class="image-container">
-      <div class="image-holder">
-      <%= image_tag 'logo.svg', class: "food-ava" %>
+      <div class="image-container">
+        <div class="image-holder">
+        <%= image_tag 'logo.svg', class: "food-ava" %>
+        </div>
       </div>
+      <div class="food-content">
+        <div class="contetn-field"><h2 class="food-info-headings">Name: </h2><p><%= @user.name %><p></div>
+        <div class="contetn-field"><h2 class="food-info-headings">Email: </h2><p><%= @user.email %><p></div>
+        <div class="contetn-field"><h2 class="food-info-headings">Total recipes: </h2><p><%= @user.recipes.length %><p></div>
+        <div class="contetn-field"><h2 class="food-info-headings">Joined: </h2><p><%= @user.created_at %><p></div>
     </div>
-    <div class="food-content">
-      <div class="contetn-field"><h2 class="food-info-headings">Name: </h2><p><%= @user.name %><p></div>
-      <div class="contetn-field"><h2 class="food-info-headings">Email: </h2><p><%= @user.email %><p></div>
-      <div class="contetn-field"><h2 class="food-info-headings">Total recipes: </h2><p><%= @user.recipes.length %><p></div>
-      <div class="contetn-field"><h2 class="food-info-headings">Joined: </h2><p><%= @user.created_at %><p></div>
   </div>
 </div>
