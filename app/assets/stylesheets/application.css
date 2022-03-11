@@ -531,3 +531,25 @@ tr:last-child td:last-child {
   font-size: var(--main-logo-font-size);
   text-shadow: 6px 6px 10px #000000;
 }
+
+.user-card {
+  background: var(--cards-bg-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 rgb(180, 180, 180);
+}
+
+.user-ava-container {
+  height: 100px;
+}
+
+.user-ava-container img {
+  height: 100%;
+}
+
+.user-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
