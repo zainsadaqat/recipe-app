@@ -1,0 +1,24 @@
+<div class="recipe-card user-card">
+  <div class="recipe-card-heading user-ava-container">
+    <%= image_tag 'logo.svg', class: "user-avatar" %>
+  </div>
+  <div class="recipe-card-contetn">
+    <div class="recipe-prew">
+        <div class="contetn-field recipe-content">
+          <h4 class="recipe-subheadings">Name: <h4>
+          <p><%= user.name %></p>
+        </div>
+        <div class="contetn-field recipe-content">
+          <h4 class="recipe-subheadings"> Email: <h4>
+          <p><%= user.email %> </p>
+        </div>
+        <div class="contetn-field recipe-content">
+          <h4 class="recipe-subheadings"> Total number of recipes: <h4>
+          <p><%= user.recipes.length %> </p>
+        </div>
+    </div>
+    <div class="recipe-card-actions">
+      <%= link_to "View profile", user_path({id: user.id}), class: "creator-btns" %>
+    </div>
+  </div>
+</div>

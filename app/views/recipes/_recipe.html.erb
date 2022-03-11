@@ -1,32 +1,27 @@
-<div id="<%= dom_id recipe %>">
-  <p>
-    <strong>Name:</strong>
-    <%= recipe.name %>
-  </p>
+<div class="recipe-card">
+  <div class="recipe-card-heading">
+    <h3 class="food-info-headings"><%= recipe.name %></h3>
+    <p>Added by <%= recipe.user.name %></p>
+  </div>
+  <div class="recipe-card-contetn">
+    <div class="recipe-prew">
+       <%if recipe.foods != nil %>
+        <div class="contetn-field recipe-content">
+          <h4 class="recipe-subheadings">Total number of ingredients required: <h4>
+          <p><%= recipe.foods.length %></p>
+        </div>
 
-  <p>
-    <strong>Preparation time:</strong>
-    <%= recipe.preparation_time %>
-  </p>
-
-  <p>
-    <strong>Cooking time:</strong>
-    <%= recipe.cooking_time %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= recipe.description %>
-  </p>
-
-  <p>
-    <strong>Public:</strong>
-    <%= recipe.public %>
-  </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= recipe.user_id %>
-  </p>
-
+        <div class="contetn-field recipe-content">
+          <h4 class="recipe-subheadings">Total price: <h4>
+          <p><%= recipe.calculate_total %> USDs </p>
+        </div>
+       <% else %>
+        <h4>Total number of ingredients required: 0</h4>
+        <h4>Total price: 0 USDs </h4>
+       <% end %>
+    </div>
+    <div class="recipe-card-actions">
+      <%= link_to "See more", recipe_path({id: recipe.id}), class: "creator-btns" %>
+    </div>
+  </div>
 </div>

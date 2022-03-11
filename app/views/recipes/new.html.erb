@@ -1,9 +1,8 @@
-<h1>New recipe</h1>
-
-<%= render "form", recipe: @recipe %>
-
-<br>
-
-<div>
-  <%= link_to "Back to recipes", recipes_path %>
+<div class="food-details-cont">
+  <div class="food-info fomrs-contaier">
+    <div class="creation-forms">
+     <h2 class="subheadings">New recipe</h2> 
+        <%= render "form", recipe: @recipe %>
+    </div>
+  </div>
 </div>

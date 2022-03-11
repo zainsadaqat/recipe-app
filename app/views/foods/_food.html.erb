@@ -5,5 +5,13 @@
   <td class="measurements"><%= food.measurement_unit %></td>
   <td class="item-price">USD <%= food.price %></td>
   <td class="actions"><%= link_to "View", food_path(id: food.id), class: "view-btns" %></td>
-  <td class="actions"><%= button_to "Remove", food_path(id: food.id), method: :delete, class: "delete-btns" %></td>
+  <td class="actions"><%= button_to "Remove",
+                          food_path(id: food.id),
+                          method: :delete,
+                          style: "padding: 5px 10px;
+                                  border: none;
+                                  border-radius: 5px;
+                                  background: linear-gradient(#f36033, #b34320);
+                                  color: #ffffff;
+                                  font-size: 14px;" %></td>
 </tr>

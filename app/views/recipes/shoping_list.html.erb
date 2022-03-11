@@ -1,0 +1,31 @@
+<div class="food-details-cont">
+  <div class="recipe-info shopping-list-info">
+    <h2 class="subheadings recipe-info-heading">Shopping List</h2>
+    <div class="food-content">
+      <%if @recipe.foods != nil %>
+        <div class="contetn-field content-fd-shp"><h2 class="food-info-headings">Amount of ingredients to buy: </h2><p><%= @recipe.foods.length %></p></div>
+        <div class="contetn-field content-fd-shp"><h2 class="food-info-headings">Total Value of the Ingredients: </h2><p><%= @recipe.calculate_total %> US dollars</p></div>
+      <% else %>
+        <div class="contetn-field content-fd-shp"><h2 class="food-info-headings">Amount of ingredients to buy: </h2><p> 0 </p></div>
+        <div class="contetn-field content-fd-shp"><h2 class="food-info-headings">Total Value of the Ingredients: </h2><p> 0 </p></div>
+      <% end %>
+    </div>
+    <div class="recipte-ingridiants">
+      <h2 class="subheadings recipe-info-heading"> Required Ingridiants</h2>
+      <table>
+        <thead>
+        <tr>
+          <th scope="col">Ingredient</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @recipe.foods_recipes.includes([:food]).each do |food_recipe| %>
+            <%= render 'ingridient', :food_recipe => food_recipe %>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
