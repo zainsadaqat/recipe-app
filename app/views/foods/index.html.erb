@@ -11,7 +11,7 @@
       </tr>
       </thead>
       <tbody>
-      <% @foods.includes(:user).each do |food| %>
+      <% @foods.each do |food| %>
           <%= render food, :food => food %>
       <% end %>
       </tbody>

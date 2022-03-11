@@ -2,7 +2,7 @@
   <div class="foods-inner-content">
     <h2 class="subheadings">Chefs</h2>
     <div class="recipes-cards-container user-cards-container">
-      <% @users.each do |user| %>
+      <% @users.includes(:recipes).each do |user| %>
         <%= render user, :user => user %>
       <% end %>
     </div>
