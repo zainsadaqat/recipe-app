@@ -3,7 +3,6 @@
     <div class="creation-forms">
       <h2 class="subheadings">Add ingredient</h2>
       <%= form_with(model: @food_recipes, url: foods_recipes_path, method: :post, local: true) do |f| %>
-
         <div class="field">
           <%= f.label(:food_id, "Choice ingredient from the list" )%>
           <%= f.collection_select :food_id, Food.order(:name), :id, :name %>
