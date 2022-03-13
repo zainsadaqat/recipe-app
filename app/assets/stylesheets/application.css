@@ -519,6 +519,7 @@ tr:last-child td:last-child {
 .alert {
   background: #f7a0a0fd;
   color: #c2392ffd;
+  margin-top: 20px;
 }
 
 .main-hero {
