@@ -1,38 +1,27 @@
 <%= form_with(model: recipe) do |form| %>
-  <% if recipe.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
 
-      <ul>
-        <% recipe.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
+  <div class="field">
+    <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div>
-    <%= form.label :preparation_time, style: "display: block" %>
+  <div class="field">
+    <%= form.label :preparation_time %>
     <%= form.text_field :preparation_time %>
   </div>
 
-  <div>
-    <%= form.label :cooking_time, style: "display: block" %>
+  <div class="field">
+    <%= form.label :cooking_time %>
     <%= form.text_field :cooking_time %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
+  <div class="field-textarea">
+    <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
 
-  <div>
-    <%= form.label :public, style: "display: block" %>
+  <div class="field-checkbox">
+    <%= form.label :public %>
     <%= form.check_box :public %>
   </div>
 
@@ -40,7 +29,8 @@
     <%= form.hidden_field :user_id, :value => current_user.id %>
   </div>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+  <div class="form-actions">
+      <%= form.submit "Add recipe", class: "creator-btns" %>
+      <%= link_to "Cancel", recipes_path, class: 'delete-btns'%>
+    </div>
+  <% end %>

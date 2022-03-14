@@ -1,14 +1,14 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
     # where user in the parameter is the current user
     return unless user.present?
+
     can :read, Recipe
     can :destroy, Recipe, user_id: user.id # if user_id matches with current user
-    
+    can :update, Recipe, user_id: user.id # if user_id matches with current user
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
