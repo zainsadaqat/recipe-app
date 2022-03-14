@@ -21,7 +21,6 @@ describe 'the signin process', type: :feature do
     click_button 'Log in'
     visit '/recipes'
     expect(current_path).to eq(recipes_path)
-    expect(page).to have_text("Recipes")
-    
+    expect(page).to have_text('Recipes')
   end
 end
