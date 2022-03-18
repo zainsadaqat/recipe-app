@@ -30,11 +30,21 @@ You need to have followings installed in your local machine:
 To setup the Items Library project in your local, in the repo page: 
 - click on code (dropdown list) > Download as ZIP. 
 - or open terminal of path you want to install project and run this command:
-`git clone git@github.com:zainsadaqat/recipe-app.git`
-- `cd recipe-app/`
-- `bundle install`
-- `bin/rails db:create`
-- `bin/rails db:migrate`
+```
+git clone git@github.com:zainsadaqat/recipe-app.git
+```
+```
+cd recipe-app/
+```
+```
+bundle install
+```
+```
+bin/rails db:create
+```
+```
+bin/rails db:migrate
+```
 
 ## Instruction on the usage
 - Run the following comands in your command line:
