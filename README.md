@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# ROR: Shef
+# Recipe App
 
 > ROR app to create recipes and share them with the community.
 
